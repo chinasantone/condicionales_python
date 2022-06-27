@@ -43,18 +43,19 @@ palabra_3 = str(input())
 print('Ingrese "1" para ordenarlas de manera alfabética o "2" para ordenarlas por cantidad de letras:')
 orden = int(input())
 if orden == 1:
-    if (palabra_1 > palabra_2) and (palabra_2 > palabra_3):
+    if (palabra_1 >= palabra_2) and (palabra_2 >= palabra_3):
         print('el orden alfabético de mayor a menor es', palabra_1, palabra_2, palabra_3) 
-    elif (palabra_1 > palabra_3) and (palabra_3 > palabra_2):
+    elif (palabra_1 >= palabra_3) and (palabra_3 >= palabra_2):
         print('el orden alfabético de mayor a menor es', palabra_1, palabra_3, palabra_2)  
-    elif (palabra_2 > palabra_1) and (palabra_1 > palabra_3):
+    elif (palabra_2 >= palabra_1) and (palabra_1 >= palabra_3):
         print('el orden alfabético de mayor a menor es', palabra_2, palabra_1, palabra_3)
-    elif (palabra_2 > palabra_3) and (palabra_3 > palabra_1):
+    elif (palabra_2 >= palabra_3) and (palabra_3 >= palabra_1):
         print('el orden alfabético de mayor a menor es', palabra_2, palabra_3, palabra_1)
-    elif (palabra_3 > palabra_1) and (palabra_1 > palabra_2):
+    elif (palabra_3 >= palabra_1) and (palabra_1 >= palabra_2):
         print('el orden alfabético de mayor amenor es', palabra_3, palabra_1, palabra_2)
-    elif (palabra_3 > palabra_2) and (palabra_2 > palabra_1):
+    elif (palabra_3 >= palabra_2) and (palabra_2 >= palabra_1):
         print('el orden alfabético de mayor amenor es', palabra_3, palabra_2, palabra_1)
+    
 
 elif orden == 2:
     if (len(palabra_1) > len(palabra_2)) and (len(palabra_2)> len(palabra_3)):
@@ -69,6 +70,20 @@ elif orden == 2:
         print('el orden por cantidad de letras de mayor a menor es', palabra_3, palabra_2, palabra_1)
     elif (len(palabra_3) > len(palabra_1)) and (len(palabra_1) > len(palabra_2)):
         print('el orden por cantidad de letras de mayor a menor es', palabra_3, palabra_1, palabra_2)
+    elif (len(palabra_1) == len(palabra_2)) and (len(palabra_3) > len(palabra_1)):
+        print('el orden por cantidad de letras de mayor a menor es', palabra_3, palabra_2, palabra_1) 
+    elif (len(palabra_1) == len(palabra_3)) and (len(palabra_2) > len(palabra_1)):
+        print('el orden por cantidad de letras de mayor a menor es', palabra_2, palabra_3, palabra_1) 
+    elif (len(palabra_2) == len(palabra_3)) and (len(palabra_1) > len(palabra_2)):
+        print('el orden por cantidad de letras de mayor a menor es', palabra_1, palabra_2, palabra_3) 
+    elif len(palabra_1) == len(palabra_2) == len(palabra_3) :
+        print('el orden por cantidad de letras de mayor a menor es', palabra_3, palabra_2, palabra_1)
+        
+
+
+     
+      
+      
         
 
 
